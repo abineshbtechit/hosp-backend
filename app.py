@@ -5,7 +5,8 @@ from flask_socketio import SocketIO, emit
 from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
-socketio = SocketIO(app, cors_allowed_origins="*")
+socketio = SocketIO(app, cors_allowed_origins="*", async_mode="threading")
+
 
 current_token =0
 
