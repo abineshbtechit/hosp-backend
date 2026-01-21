@@ -9,6 +9,10 @@ socketio = SocketIO(app, cors_allowed_origins="*")
 
 current_token =0
 
+@app.route("/")
+def home():
+    return "Backend is running"
+
 
 @app.route("/signup", methods=["POST"])
 def signup():
